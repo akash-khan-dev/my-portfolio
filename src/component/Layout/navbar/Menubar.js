@@ -3,7 +3,6 @@ import Logo from "@/SVG/Logo";
 import Menudata from "@/data/Menudata";
 import Link from "next/link";
 import React from "react";
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -11,16 +10,18 @@ import { DM_Sans } from "next/font/google";
 
 const DmSans = DM_Sans({
   subsets: ["latin"],
-  weight: "400",
+  weight: "500",
 });
+
 const Menubar = () => {
   return (
     <>
       <Navbar expand="lg">
         <Container>
-          <Link href="#">
+          <Link href="#">AKASH</Link>
+          {/* <Link href="#">
             <Logo />
-          </Link>
+          </Link> */}
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -39,7 +40,9 @@ const Menubar = () => {
               ))}
             </Nav>
 
-            <Button variant="outline-success">Search</Button>
+            <button className={DmSans.className} variant="outline-success">
+              Contact Now
+            </button>
           </Navbar.Collapse>
         </Container>
       </Navbar>
