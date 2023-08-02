@@ -77,3 +77,20 @@
     }
   }
 }
+.copyright {
+  background-color: $primary-color;
+  padding: 10px 0px;
+  .copyright-wrapper {
+    ul {
+      display: flex;
+      gap: 15px;
+      li {
+        a {
+          font-size: 14px;
+          line-height: 30px;
+          color: $white-color;
+        }
+      }
+    }
+  }
+}

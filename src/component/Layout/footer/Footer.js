@@ -10,6 +10,7 @@ import { Instagram } from "@/SVG/Instagram";
 import { Twitter } from "@/SVG/Twitter";
 import { Pinterest } from "@/SVG/Pinterest";
 import { motion } from "framer-motion";
+import Copyright from "./Copyright";
 const OpenSans = Open_Sans({
   subsets: ["latin"],
 });
@@ -116,6 +117,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <Copyright />
     </>
   );
 };
