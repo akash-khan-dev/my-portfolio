@@ -18,10 +18,10 @@ const Menubar = () => {
     <>
       <Navbar expand="lg">
         <Container>
-          <Link href="#">AKASH</Link>
-          {/* <Link href="#">
+          {/* <Link href="#">AKASH</Link> */}
+          <Link href="#">
             <Logo />
-          </Link> */}
+          </Link>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
