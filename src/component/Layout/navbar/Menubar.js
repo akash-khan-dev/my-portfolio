@@ -7,6 +7,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { DM_Sans } from "next/font/google";
+import { motion } from "framer-motion";
 
 const DmSans = DM_Sans({
   subsets: ["latin"],
@@ -40,9 +41,14 @@ const Menubar = () => {
               ))}
             </Nav>
 
-            <button className={DmSans.className} variant="outline-success">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 200 }}
+              className={DmSans.className}
+              variant="outline-success"
+            >
               Contact Now
-            </button>
+            </motion.button>
           </Navbar.Collapse>
         </Container>
       </Navbar>
