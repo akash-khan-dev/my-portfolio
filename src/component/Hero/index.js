@@ -21,9 +21,9 @@ const Hero = () => {
         initial="hidden"
         whileInView="visible"
         variants={animation}
-        className="hero"
         viewport={{ once: false }}
         transition={{ staggerChildren: 0.2, duration: 0.4, ease: "easeIn" }}
+        className="hero"
       >
         <div className="container">
           <div className="row align-items-center">
