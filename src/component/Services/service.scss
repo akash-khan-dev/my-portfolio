@@ -1,6 +1,6 @@
 .Service {
   padding-top: 50px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   .service-details-wrapper {
     h1 {
       font-weight: 700;
@@ -29,6 +29,49 @@
       border-radius: 8px;
       font-weight: 700;
       font-size: 18px;
+    }
+  }
+  .service-wrapper {
+    padding: 24px 55px 15px 24px;
+    box-sizing: border-box;
+    background-color: $white-color;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    transition: all linear 0.3s;
+    cursor: pointer;
+    &:hover {
+      margin-left: 44px;
+      margin-right: -44px;
+    }
+
+    .service-right-icon {
+      width: 10%;
+      .icon-box {
+        width: 60px;
+        height: 60px;
+        background-color: $primary-color;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .service-right-text {
+      width: 87%;
+      .text-box {
+        h2 {
+          color: $black-color;
+          font-size: 24px;
+          font-weight: 700;
+        }
+        p {
+          font-size: 18px;
+          color: $text-color;
+          line-height: 30px;
+          padding-right: 40px;
+        }
+      }
     }
   }
 }
