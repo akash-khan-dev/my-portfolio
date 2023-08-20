@@ -1,0 +1,20 @@
+.company {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  .company-heading {
+    h2 {
+      font-size: 48px;
+      font-weight: 700;
+      color: #414141;
+    }
+  }
+  .company-wrapper {
+    width: 100%;
+    min-height: 200px;
+    box-sizing: border-box;
+    border: 2px solid #d8d2ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
