@@ -19,9 +19,35 @@ const Blog = () => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2000,
     pauseOnHover: false,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <>
@@ -39,27 +65,34 @@ const Blog = () => {
               </div>
             </div>
             <div className="col-lg-12">
-              <Slider {...settings}>
-                {blogData.map((data, i) => (
-                  <div key={i} className="blog-wrapper ">
-                    <div className="blog-img">
-                      <Image src={data.img} alt="blogimg" />
-                    </div>
-                    <div className="blog-content">
-                      <div className="blog-date">
-                        <div className="date-icon">
-                          <BlogDate />
-                        </div>
-                        <div className="date-content">
-                          <p className={DmSans.className}>{data.date}</p>
-                        </div>
+              <div>
+                <Slider className="blog-slider-wrapper" {...settings}>
+                  {blogData.map((data, i) => (
+                    <div key={i} className="blog-wrapper ">
+                      <div className="blog-img">
+                        <Image
+                          src={data.img}
+                          width={200}
+                          height={200}
+                          alt="blogimg"
+                        />
                       </div>
-                      <h2 className={DmSans.className}>{data.title}</h2>
-                      <button className={DmSans.className}>{data.btn}</button>
+                      <div className="blog-content">
+                        <div className="blog-date">
+                          <div className="date-icon">
+                            <BlogDate />
+                          </div>
+                          <div className="date-content">
+                            <p className={DmSans.className}>{data.date}</p>
+                          </div>
+                        </div>
+                        <h2 className={DmSans.className}>{data.title}</h2>
+                        <button className={DmSans.className}>{data.btn}</button>
+                      </div>
                     </div>
-                  </div>
-                ))}
-              </Slider>
+                  ))}
+                </Slider>
+              </div>
             </div>
           </div>
         </div>
