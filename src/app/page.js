@@ -1,5 +1,6 @@
 import About from "@/component/About";
 import Blog from "@/component/Blog";
+import Company from "@/component/Company";
 import Hero from "@/component/Hero";
 import Layout from "@/component/Layout/Layout";
 import Portfolio from "@/component/Portfolio";
@@ -14,6 +15,7 @@ export default function Home() {
         <Service />
         <Portfolio />
         <Blog />
+        <Company />
       </Layout>
     </>
   );
